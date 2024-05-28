@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh; /* Ajusta la altura a la de la ventana */
+    overflow: hidden; /* Previene el desbordamiento */
+}
+
+
+.sidebar {
+    background-color: #263238; /* Color más oscuro para la barra lateral */
+    color: white;
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin-bottom: 10px; /* Añade espacio entre los elementos */
+    background: #37474F; /* Fondo para cada elemento */
+    border: none; /* Remueve el borde */
+}
+
+.sidebar ul li:hover {
+    background: #455A64; /* Color al pasar el mouse */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
+}
+
+.navbar {
+    background-color: #CFD8DC; /* Color claro para la barra superior */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    background-color: #ECEFF1; /* Color de fondo para el contenido */
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #B0BEC5; /* Borde más claro */
+    padding: 8px;
+    text-align: left;
+}
+
+thead {
+    background-color: #546E7A; /* Fondo para el encabezado de la tabla */
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #CFD8DC; /* Alternar colores para las filas */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ECEFF1;
+}

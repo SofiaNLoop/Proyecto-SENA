@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - Gestion Servicios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* CSS personalizado */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .card {
+            width: 400px;
+        }
+        .form-group label {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body text-center">
+            <img src="img/logo.png" class="img-fluid mb-3" alt="Logo">
+            <h5 class="card-title">Iniciar Sesión</h5>
+            <form id="loginForm" method="post" >
+                <div class="form-group">
+                    <label for="correo">Usuario</label>
+                    <input type="text" class="form-control" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" class="form-control" id="contraseña" name="contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+                <div class="text-left mt-3">
+                    <a href="recuperarContraseña.html" class="btn btn-link mr-2">Olvidé mi Contraseña</a>
+
+                    <a href="registrarAdmin.html" class="btn btn-link">Registrar Usuario</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+    <!-- <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            var usuario = document.getElementById("usuario").value;
+            var contraseña = document.getElementById("contraseña").value;
+
+            if (usuario.trim() === "" || contraseña.trim() === "") {
+                alert("Por favor, ingrese usuario y contraseña");
+                event.preventDefault();
+            }
+        });
+    </script> -->
+
+    
+</body>
+</html>
