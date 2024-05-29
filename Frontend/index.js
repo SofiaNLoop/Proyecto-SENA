@@ -1,5 +1,5 @@
 const getAdmins = () => {
-    fetch('http://localhost:8080/api/v1/admin/', {
+    fetch('http://localhost:8081/api/v1/admin/', {
         method: 'GET', 
         headers: {
             'Content-Type': 'application/json',

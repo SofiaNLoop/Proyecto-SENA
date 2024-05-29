@@ -11,7 +11,7 @@ document.getElementById('registroForm').addEventListener('submit', function(even
         contraseña: contraseña
     };
 
-    fetch('http://localhost:8080/api/v1/admin/create', {
+    fetch('http://localhost:8081/api/v1/admin/create', {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json',
