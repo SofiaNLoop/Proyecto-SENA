@@ -9,19 +9,25 @@ const getAdmins = () => {
     .then(response => response.json())
     .then(data => {
         const tableBody = document.getElementById('tableBody');
-            tableBody.innerHTML = ''; // Limpia el contenido actual del tbody
+            tableBody.innerHTML = '';
 
             data.forEach(admin => {
-                const tr = document.createElement('tr');  // Crea una nueva fila
+                const tr = document.createElement('tr');  
                 tr.innerHTML = `<td>${admin.id}</td>
                                 <td>${admin.nombre}</td>
-                                <td>${admin.correo}</td>`;
-                tableBody.appendChild(tr);  // Añade la fila al cuerpo de la tabla
+                                <td>${admin.correo}</td>
+                                <td><button onclick="actualizarUsuarioForm(${admin.id})">Actualizar</button></td>`;
+                tableBody.appendChild(tr);  
             });
     })
     .catch((error) => {
         console.error('Error:', error);
     });
+}
+
+const actualizarUsuarioForm = (id) => {
+    localStorage.setItem("idUser", id);
+    window.location.href = 'actualizarUsuario.html';
 }
 
 getAdmins();
